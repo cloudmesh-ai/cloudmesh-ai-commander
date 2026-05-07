@@ -403,7 +403,7 @@ If your colleagues want to use the `commander` tool to manage their own tunnel t
 4. **Create Tunnel**:
    They can then run the tunnel command using the node you provided:
    ```bash
-   cmc commander tunnel <compute-node-hostname> 18123 18123
+   cmc commander tunnel udc-an26-1 18123 18123
    ```
    Now they can use `http://localhost:18123/v1` in their tools.
 
