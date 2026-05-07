@@ -1,0 +1,15 @@
+# AI Commander Configuration
+deployment:
+  partition: "bii-gpu"
+  ssh_host: "uva"
+  remote_scratch_path: "/scratch/thf2bn"
+  remote_cache_path: "/scratch/thf2bn/hf_cache"
+
+vllm:
+  model: "google/gemma-4-31B-it"
+  tensor_parallel_size: 4
+  gpu_memory_utilization: 0.85
+  max_model_len: 131072
+  load_format: "safetensors"
+  tool_call_parser: "gemma4"
+  default_port: 18123

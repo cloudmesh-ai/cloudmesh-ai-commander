@@ -1,21 +1,21 @@
 #!/bin/bash
 
 # Navigate to the working directory and load Apptainer
-cd /scratch/thf2bn
+cd {remote_scratch_path}
 module load apptainer
 
 # Run vLLM server using Apptainer
 nohup apptainer run --nv \
-  -B /scratch/thf2bn/hf_cache:/root/.cache/huggingface \
+  -B {remote_cache_path}:/root/.cache/huggingface \
   --env HF_TOKEN="$(cat $HOME/.config/cloudmesh/llm/HF_token.txt)" \
   --env VLLM_API_KEY="$(cat $HOME/.config/cloudmesh/llm/server_master_key.txt)" \
   vllm_gemma4.sif \
-  --model google/gemma-4-31B-it \
-  --tensor-parallel-size 4 \
-  --gpu-memory-utilization 0.85 \
-  --max-model-len 131072 \
+  --model {model} \
+  --tensor-parallel-size {tensor_parallel_size} \
+  --gpu-memory-utilization {gpu_memory_utilization} \
+  --max-model-len {max_model_len} \
   --enable-prefix-caching \
-  --load-format safetensors \
-  --tool-call-parser gemma4 \
+  --load-format {load_format} \
+  --tool-call-parser {tool_call_parser} \
   --host 0.0.0.0 \
   --port {port} > /tmp/vllm.log 2>&1 &
