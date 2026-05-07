@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloudmesh-ai-commander"
+version = "0.1.0"
+description = "commander command for Cloudmesh AI"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "cloudmesh-ai-common",
+    "cloudmesh-ai-uva",
+]
+
+[project.entry-points."cloudmesh.ai.cmc"]
+commander = "cloudmesh.ai.command.commander:register"
