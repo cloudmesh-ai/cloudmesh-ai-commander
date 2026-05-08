@@ -1,0 +1,2 @@
+[cloudmesh.ai.cmc]
+commander = cloudmesh.ai.command.commander:register

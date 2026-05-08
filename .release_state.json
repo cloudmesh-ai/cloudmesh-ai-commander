@@ -1,0 +1,10 @@
+{
+    "package_name": "cloudmesh-ai-commander",
+    "baseline_commit": "60d83c4653e3fc3823c8d2118965e3852159ab37",
+    "original_version": null,
+    "created_tag": "v7.1.1.dev1",
+    "completed_steps": [
+        "testpypi"
+    ],
+    "start_time": "2026-05-07T14:35:11.719831"
+}
