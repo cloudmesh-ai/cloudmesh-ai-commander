@@ -114,8 +114,6 @@ def test_path_cmd(path):
     expanded = path_expand(path)
     console.info(f"Expanded path: {expanded}")
 
-entry_point = commander_group
-
 def register(cli):
     """Registers the commander command group to the main CLI."""
     cli.add_command(commander_group)
