@@ -11,9 +11,6 @@ nav:
   - GitHub: https://github.com/cloudmesh-ai/cloudmesh-ai-commander
   - Issues: https://github.com/cloudmesh-ai/cloudmesh-ai-commander/issues
 - API Reference: api.md
-- README-mock: README-mock.md
-- README: README.md
-- README-gemma: README-gemma.md
 plugins:
 - search
 - mkdocstrings:
