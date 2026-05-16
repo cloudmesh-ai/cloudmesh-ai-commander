@@ -21,6 +21,7 @@ requires-python = ">=3.10"
 dependencies = [
     "cloudmesh-ai-common",
     "cloudmesh-ai-uva",
+    "cloudmesh-ai-theme",
 ]
 
 [project.entry-points."cloudmesh.ai.cmc"]
