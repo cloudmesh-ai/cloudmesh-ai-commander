@@ -36,21 +36,15 @@ Depending on your needs, please refer to the appropriate guide:
 
 To get started with the commander:
 
-1. Setup environment
+```bash
+# 1. Setup environment
+pyenv virtualenv 3.14.4 CMC
+pyenv local CMC
 
-   ```bash
-   pyenv virtualenv 3.14.4 CMC
-   pyenv local CMC
-   ```
-
-2. Install from source
-   
-   ```bash
-   git clone https://github.com/cloudmesh-ai/cloudmesh-ai-commander.git
-   cd cloudmesh-ai-commander
-   pip install -e .
-   ```
-
+# 2. Install from source
+git clone https://github.com/cloudmesh-ai/cloudmesh-ai-commander.git
+cd cloudmesh-ai-commander
+pip install -e .
 ## Core Dependencies
 This project depends on the following core components of the Cloudmesh AI ecosystem:
 - [cloudmesh-ai-common](https://github.com/cloudmesh-ai/cloudmesh-ai-common)

@@ -11,6 +11,7 @@ telemetry = Telemetry("commander")
 commander_group = click.group(name="commander")
 
 from cloudmesh.ai.commander.commander import Commander
+from cloudmesh.ai.mesh.command.mesh import register as register_mesh
 
 
 @commander_group.command(name="tunnel")
@@ -117,3 +118,4 @@ def test_path_cmd(path):
 def register(cli):
     """Registers the commander command group to the main CLI."""
     cli.add_command(commander_group)
+    register_mesh(cli)
